@@ -1,0 +1,41 @@
+[
+    {
+        "model": "raterprojectapi.game",
+        "pk": 1,
+        "fields": {
+            "title": "Risk",
+            "description": "The Game of Global Domination",
+            "gamer_id": 1,
+            "year_released": 1959,
+            "number_of_players": 4,
+            "estimated_time": 8,
+            "minimum_age": 12
+        }
+    },
+    {
+        "model": "raterprojectapi.game",
+        "pk": 2,
+        "fields": {
+            "title": "Yahtzee",
+            "description": "Rolling dice and yelling",
+            "gamer_id": 1,
+            "year_released": 1956,
+            "number_of_players": 1,
+            "estimated_time": 0.5,
+            "minimum_age": 8
+        }
+    },
+    {
+        "model": "raterprojectapi.game",
+        "pk": 1,
+        "fields": {
+            "title": "Uno",
+            "description": "shedding type card game",
+            "gamer_id": 1,
+            "year_released": 1971,
+            "number_of_players": 2,
+            "estimated_time": 1,
+            "minimum_age": 7
+        }
+    }
+]

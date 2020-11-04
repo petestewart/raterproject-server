@@ -1,0 +1,29 @@
+[
+    {
+        "model": "raterprojectapi.gamereview",
+        "pk": 1,
+        "fields": {
+            "game_id": 1,
+            "gamer_id": 1,
+            "review": "Hope you don't need to be anywhere any time soon"
+        }
+    },
+    {
+        "model": "raterprojectapi.gamereview",
+        "pk": 2,
+        "fields": {
+            "game_id": 2,
+            "gamer_id": 1,
+            "review": "An oldie but a goodie"
+        }
+    },
+    {
+        "model": "raterprojectapi.gamereview",
+        "pk": 3,
+        "fields": {
+            "game_id": 3,
+            "gamer_id": 1,
+            "review": "The draw four card is the bane of my existence"
+        }
+    }
+]

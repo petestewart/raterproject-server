@@ -11,7 +11,7 @@ def login_user(request):
     '''Handles the authentication of a gamer
 
     Method arguments:
-        request -- The full HTTP request object
+      request -- The full HTTP request object
     '''
 
     req_body = json.loads(request.body.decode())
@@ -19,27 +19,29 @@ def login_user(request):
     # If the request is a HTTP POST, try to pull out the relevant information.
     if request.method == 'POST':
 
-        # Use built-in authenticate method to verify
+        # Use the built-in authenticate method to verify
         username = req_body['username']
         password = req_body['password']
         authenticated_user = authenticate(username=username, password=password)
 
         # If authentication was successful, respond with their token
-        token = Token.objects.get(user=authenticated_user)        
-        data = json.dumps({"valid": True, "token": token.key})
-        return HttpResponse(data, content_type='application/json')
+        if authenticated_user is not None:
+            token = Token.objects.get(user=authenticated_user)
+            data = json.dumps({"valid": True, "token": token.key})
+            return HttpResponse(data, content_type='application/json')
 
-    else:
-        # Bad login details were provided, so user is denied
-        data = json.dumps({"valid": False})
-        return HttpResponse(data, content_type='application/json')
+        else:
+            # Bad login details were provided. So we can't log the user in.
+            data = json.dumps({"valid": False})
+            return HttpResponse(data, content_type='application/json')
+
 
 @csrf_exempt
 def register_user(request):
     '''Handles the creation of a new gamer for authentication
 
     Method arguments:
-        request -- The full HTTP object
+      request -- The full HTTP request object
     '''
 
     # Load the JSON string of the request body into a dict
@@ -52,7 +54,7 @@ def register_user(request):
         email=req_body['email'],
         password=req_body['password'],
         first_name=req_body['first_name'],
-        last_name=req_body['last_name'],
+        last_name=req_body['last_name']
     )
 
     # Now save the extra info in the raterprojectapi_gamer table
