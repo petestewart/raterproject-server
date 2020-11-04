@@ -1,0 +1,29 @@
+[
+    {
+        "model": "raterprojectapi.gamepic",
+        "pk": 1,
+        "fields": {
+            "game_id": 1,
+            "gamer_id": 1,
+            "pic_url": "https://images-na.ssl-images-amazon.com/images/I/91jsvpbPP3L._AC_SX679_.jpg"
+        }
+    },
+    {
+        "model": "raterprojectapi.gamepic",
+        "pk": 2,
+        "fields": {
+            "game_id": 2,
+            "gamer_id": 1,
+            "pic_url": "https://images-na.ssl-images-amazon.com/images/I/61ov9uJv78L._AC_SY450_.jpg"
+        }
+    },
+    {
+        "model": "raterprojectapi.gamepic",
+        "pk": 3,
+        "fields": {
+            "game_id": 3,
+            "gamer_id": 1,
+            "pic_url": "https://2f96be1b505f7f7a63c3-837c961929b51c21ec10b9658b068d6c.ssl.cf2.rackcdn.com/products/060262.jpg"
+        }
+    }
+]
