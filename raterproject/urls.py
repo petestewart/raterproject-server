@@ -1,11 +1,13 @@
 from rest_framework import routers
 from django.conf.urls import include
 from django.urls import path
-from raterprojectapi.views import register_user, login_user, Games, Gamers
+from raterprojectapi.views import register_user, login_user, Games, Gamers, Categories, GameCategories
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'games', Games, 'game')
 router.register(r'gamers', Gamers, 'gamer')
+router.register(r'categories', Categories, 'category')
+router.register(r'gamecategories', GameCategories, 'gamecategory')
 
 
 urlpatterns = [
